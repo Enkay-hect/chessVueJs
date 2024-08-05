@@ -172,7 +172,7 @@ const width = 8;
 
         if (
             (starterRow.includes(startId) && startId + width * 2 === targetId )  || 
-            (startId + width === targetId) || 
+            (startId + width === targetId && !document.querySelector(`[square-id="${startId + width}"]`).firstElementChild) || 
             (startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstElementChild )  || 
             (startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstElementChild  )
         ) {
@@ -198,7 +198,7 @@ const width = 8;
         )
         {
           return true; 
-        }
+        } 
       break;
 
       case 'bishop' : 
