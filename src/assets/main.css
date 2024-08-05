@@ -1,0 +1,95 @@
+/* @import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+.square{
+  height: 10vh;
+  width: 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.square svg{
+  position: relative;
+  z-index: -9;
+  height: 6vh;
+  padding: 0.9rem;
+  /* border: 2px solid red; */
+}
+
+.piece{
+  position: relative;
+  z-index: 10;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  background-color: transparent;
+  /* border: 1px solid yellow; */
+  /* width: 50%; */
+  /* justify-content: center; */
+}
+
+
+path{
+  position: relative;
+  z-index: -9;
+}
+
+.beige{
+  background-color: rgb(110, 110, 98);
+}
+
+.brown{
+  background-color: rgb(20, 100, 20);
+   /* rgb(169, 43, 43); */
+}
+
+.black{
+  fill: rgb(28, 28, 28)
+}
+
+.white{
+  fill: rgb(214, 55, 55);
+}
+
