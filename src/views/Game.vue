@@ -582,7 +582,7 @@ const width = 8;
                     && !document.querySelector(`[square-id = "${startId - width + 1}"]`).firstElementChild
 
 
-                    
+
                 //rook move
 
 
@@ -709,8 +709,24 @@ const width = 8;
                 && !document.querySelector(`[square-id = "${startId - 2}"]`).firstElementChild
                 && !document.querySelector(`[square-id = "${startId - 1}"]`).firstElementChild
         ){
-
+            return true
         }
+        break;
+
+        case 'king':
+          if(
+            startId + 1 === targetId
+            || startId - 1 === targetId
+            || startId + width === targetId
+            || startId - width === targetId
+            || startId + width -1 === targetId
+            || startId + width +1 === targetId
+            || startId - width +1 === targetId
+            || startId + width -1 === targetId
+          ){
+            return true
+          }
+          break;
     }  
   }
 
