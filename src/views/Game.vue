@@ -176,7 +176,6 @@ const width = 8;
             (startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstElementChild )  || 
             (startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstElementChild  )
         ) {
-          // document.querySelector(`[square-id="${startId + width - 1}"]`).firstElementChild 
             return true; 
         } 
         
@@ -713,21 +712,23 @@ const width = 8;
         }
         break;
 
-        case 'king':
-          if(
-            startId + 1 === targetId
-            || startId - 1 === targetId
-            || startId + width === targetId
-            || startId - width === targetId
-            || startId + width -1 === targetId
-            || startId + width +1 === targetId
-            || startId - width +1 === targetId
-            || startId + width -1 === targetId
-          ){
-            return true
-          }
-          break;
-    }  
+      case 'king':
+        if(
+          startId + 1 === targetId
+          || startId - 1 === targetId
+          || startId + width === targetId
+          || startId - width === targetId
+          || startId + width -1 === targetId
+          || startId + width +1 === targetId
+          || startId - width +1 === targetId
+          || startId + width -1 === targetId
+        ){
+          return true
+        }
+        break;
+    
+    }
+
   }
 
 
@@ -763,7 +764,6 @@ function changePlayer(){
           square.setAttribute('square-id', i)
         })
       }
-
       
 
 
@@ -772,7 +772,6 @@ function changePlayer(){
       createBoard();
       addListenersToSquares();
       // playerGo = 'black'
-      
     });
 
 
@@ -781,13 +780,12 @@ function changePlayer(){
 
 
 <style scoped>
-
   #gameboard{
-      height: auto;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
   
   .square{
     height: 40px;
